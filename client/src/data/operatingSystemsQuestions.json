@@ -1,0 +1,233 @@
+{
+  "subject": "Operating Systems",
+  "description": "Questions on operating system concepts, process management, memory management, and more",
+  "topics": [
+    {
+      "name": "Process Management",
+      "description": "Process states, scheduling algorithms, and synchronization",
+      "questions": [
+        {
+          "id": "process_1",
+          "question": "What is a process in operating systems?",
+          "answer": "A process is an instance of a program in execution. It includes the program code, current activity, and all the resources it needs.",
+          "explanation": "Processes are the fundamental unit of work in an operating system.",
+          "difficulty": "beginner",
+          "subcategory": "Process Concepts"
+        },
+        {
+          "id": "process_2",
+          "question": "What are the main states of a process?",
+          "answer": "The main states of a process are: New, Ready, Running, Waiting/Blocked, and Terminated.",
+          "explanation": "Processes move between these states as they execute, wait for resources, or complete.",
+          "difficulty": "intermediate",
+          "subcategory": "Process States"
+        },
+        {
+          "id": "process_3",
+          "question": "Which of the following is NOT a CPU scheduling algorithm?",
+          "options": ["Round Robin", "Shortest Job First", "First Come First Served", "Indexed Allocation"],
+          "answer": "Indexed Allocation",
+          "explanation": "Indexed Allocation is a file allocation method, not a CPU scheduling algorithm. The others are valid scheduling algorithms.",
+          "difficulty": "intermediate",
+          "subcategory": "CPU Scheduling"
+        },
+        {
+          "id": "process_4",
+          "question": "What is context switching?",
+          "answer": "Context switching is the process of saving the state of a currently running process and loading the state of another process so that it can run.",
+          "explanation": "Context switching allows multiple processes to share a single CPU by saving and restoring their execution contexts.",
+          "difficulty": "intermediate",
+          "subcategory": "Process Management"
+        },
+        {
+          "id": "process_5",
+          "question": "What is a deadlock in operating systems?",
+          "options": ["When a process is waiting for a resource indefinitely", "When two processes are competing for CPU time", "When a set of processes are blocked because each is holding resources needed by others", "When a process consumes too much memory"],
+          "answer": "When a set of processes are blocked because each is holding resources needed by others",
+          "explanation": "Deadlock occurs when processes are unable to proceed because each is waiting for resources held by another process in the set.",
+          "difficulty": "advanced",
+          "subcategory": "Process Synchronization"
+        },
+        {
+          "id": "process_6",
+          "question": "What are the four necessary conditions for a deadlock to occur?",
+          "answer": "Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait.",
+          "explanation": "All four conditions must be present simultaneously for a deadlock to occur. Preventing any one of them can prevent deadlocks.",
+          "difficulty": "advanced",
+          "subcategory": "Deadlocks"
+        },
+        {
+          "id": "process_7",
+          "question": "What is a semaphore in process synchronization?",
+          "answer": "A semaphore is a synchronization primitive that uses a counter to control access to shared resources by multiple processes. It can be used to solve critical section problems and coordinate resource access.",
+          "explanation": "Semaphores come in two types: binary semaphores (similar to mutexes) and counting semaphores (can allow multiple processes to access a resource with a limited capacity).",
+          "difficulty": "advanced",
+          "subcategory": "Process Synchronization"
+        },
+        {
+          "id": "process_8",
+          "question": "What is the difference between preemptive and non-preemptive scheduling?",
+          "answer": "In preemptive scheduling, the CPU can be taken away from a process during execution (usually due to a higher priority process becoming ready or time slice expiration). In non-preemptive scheduling, once a process gets the CPU, it keeps it until it terminates or voluntarily yields.",
+          "explanation": "Preemptive scheduling is more responsive for interactive systems but requires more overhead for context switching.",
+          "difficulty": "intermediate",
+          "subcategory": "CPU Scheduling"
+        },
+        {
+          "id": "process_9",
+          "question": "What is the producer-consumer problem?",
+          "answer": "The producer-consumer problem is a classic synchronization problem where producers add data to a shared buffer and consumers remove data from it. The challenge is to ensure proper synchronization to prevent race conditions, buffer overflow/underflow, and deadlocks.",
+          "explanation": "Solutions typically involve semaphores or monitors to coordinate access to the shared buffer.",
+          "difficulty": "advanced",
+          "subcategory": "Process Synchronization"
+        }
+      ]
+    },
+    {
+      "name": "Memory Management",
+      "description": "Paging, segmentation, virtual memory, and memory allocation strategies",
+      "questions": [
+        {
+          "id": "memory_1",
+          "question": "What is virtual memory?",
+          "answer": "Virtual memory is a memory management technique that provides an illusion to users of a very large main memory. It allows a computer to run programs larger than its physical memory by using disk space as an extension of RAM.",
+          "explanation": "Virtual memory enables efficient multitasking and better memory utilization while isolating processes from each other.",
+          "difficulty": "intermediate",
+          "subcategory": "Virtual Memory"
+        },
+        {
+          "id": "memory_2",
+          "question": "What is paging in operating systems?",
+          "answer": "Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory. It divides physical memory into fixed-sized blocks called frames and logical memory into blocks of the same size called pages.",
+          "explanation": "Paging allows the operating system to store and retrieve data from secondary storage for use in main memory.",
+          "difficulty": "intermediate",
+          "subcategory": "Paging"
+        },
+        {
+          "id": "memory_3",
+          "question": "What is the difference between internal and external fragmentation?",
+          "answer": "Internal fragmentation occurs when memory is allocated in blocks larger than requested, leaving unused memory within allocated regions. External fragmentation occurs when free memory is divided into small blocks that are not contiguous, making it difficult to allocate large contiguous blocks.",
+          "explanation": "Paging helps reduce external fragmentation, while variable-sized partitioning can lead to both types of fragmentation.",
+          "difficulty": "intermediate",
+          "subcategory": "Memory Allocation"
+        },
+        {
+          "id": "memory_4",
+          "question": "What is a page fault?",
+          "answer": "A page fault occurs when a program tries to access a page that is mapped in the virtual address space but not loaded in physical memory. The operating system must then retrieve the page from secondary storage.",
+          "explanation": "Page faults are a normal part of virtual memory operation but can significantly impact performance if they occur frequently.",
+          "difficulty": "intermediate",
+          "subcategory": "Virtual Memory"
+        },
+        {
+          "id": "memory_5",
+          "question": "Which page replacement algorithm suffers from Belady's anomaly?",
+          "options": ["FIFO", "LRU", "Optimal", "Clock"],
+          "answer": "FIFO",
+          "explanation": "First-In-First-Out (FIFO) can suffer from Belady's anomaly, where increasing the number of page frames can actually increase the number of page faults.",
+          "difficulty": "advanced",
+          "subcategory": "Page Replacement"
+        },
+        {
+          "id": "memory_6",
+          "question": "What is thrashing in operating systems?",
+          "answer": "Thrashing is a condition where excessive paging operations are occurring, and the system spends more time managing page transfers than executing application code. It drastically reduces CPU utilization and system performance.",
+          "explanation": "Thrashing typically occurs when a system is severely overcommitted and has insufficient physical memory for the working sets of all active processes.",
+          "difficulty": "advanced",
+          "subcategory": "Virtual Memory"
+        },
+        {
+          "id": "memory_7",
+          "question": "What is the working set model?",
+          "answer": "The working set model is a memory management concept that defines the set of pages a process requires in its recent memory references (its working set). The model helps prevent thrashing by ensuring each process has enough memory for its working set.",
+          "explanation": "If there isn't enough memory for all processes' working sets, some processes may be suspended to allow others to run efficiently.",
+          "difficulty": "expert",
+          "subcategory": "Virtual Memory"
+        }
+      ]
+    },
+    {
+      "name": "File Systems",
+      "description": "File organization, allocation methods, and directory structure",
+      "questions": [
+        {
+          "id": "file_1",
+          "question": "What are the three main methods of file allocation?",
+          "answer": "Contiguous allocation, Linked allocation, and Indexed allocation.",
+          "explanation": "Each method has different approaches to organizing file blocks on disk, with trade-offs in terms of access speed, fragmentation, and overhead.",
+          "difficulty": "intermediate",
+          "subcategory": "File Allocation"
+        },
+        {
+          "id": "file_2",
+          "question": "What is a file descriptor in UNIX/Linux systems?",
+          "answer": "A file descriptor is a non-negative integer that uniquely identifies an open file within a process. It serves as an index to the file descriptor table maintained by the kernel for each process.",
+          "explanation": "Standard file descriptors include 0 (stdin), 1 (stdout), and 2 (stderr).",
+          "difficulty": "intermediate",
+          "subcategory": "File Management"
+        },
+        {
+          "id": "file_3",
+          "question": "What is an inode in a UNIX file system?",
+          "answer": "An inode (index node) is a data structure that stores metadata about a file, such as permissions, ownership, size, timestamps, and pointers to the actual data blocks. It does not contain the file name, which is stored in the directory entry.",
+          "explanation": "Each file in a UNIX file system is represented by an inode, and multiple directory entries (hard links) can point to the same inode.",
+          "difficulty": "advanced",
+          "subcategory": "File Systems"
+        },
+        {
+          "id": "file_4",
+          "question": "What is the difference between a hard link and a symbolic link?",
+          "answer": "A hard link is a directory entry that points to the same inode as another file (sharing the same data blocks). A symbolic link (soft link) is a special file that contains a path to another file, essentially a shortcut.",
+          "explanation": "Hard links can't cross file system boundaries or link to directories, while symbolic links can. Deleting the original file doesn't affect hard links but breaks symbolic links.",
+          "difficulty": "intermediate",
+          "subcategory": "File Systems"
+        },
+        {
+          "id": "file_5",
+          "question": "What is journaling in a file system?",
+          "answer": "Journaling is a technique used by many modern file systems to ensure consistency in case of system crashes or power failures. It maintains a journal or log of changes before they are committed to the main file system, allowing recovery after unexpected shutdowns.",
+          "explanation": "Journaling file systems (like ext3, ext4, NTFS) can recover much faster after a crash than non-journaling systems.",
+          "difficulty": "advanced",
+          "subcategory": "File Systems"
+        }
+      ]
+    },
+    {
+      "name": "I/O Systems",
+      "description": "I/O hardware, interfaces, and scheduling",
+      "questions": [
+        {
+          "id": "io_1",
+          "question": "What are the three main methods of I/O device handling?",
+          "answer": "Programmed I/O, Interrupt-driven I/O, and Direct Memory Access (DMA).",
+          "explanation": "These methods vary in CPU utilization and efficiency, with DMA being the most efficient for large data transfers.",
+          "difficulty": "intermediate",
+          "subcategory": "I/O Techniques"
+        },
+        {
+          "id": "io_2",
+          "question": "What is buffering in I/O operations?",
+          "answer": "Buffering is the process of temporarily storing data in memory (buffers) while it's being transferred between devices or between a device and an application. It helps manage speed mismatches and allows for more efficient batch processing.",
+          "explanation": "Buffers can improve performance by reducing the number of I/O operations and allowing the CPU to continue with other tasks while I/O is in progress.",
+          "difficulty": "intermediate",
+          "subcategory": "I/O Performance"
+        },
+        {
+          "id": "io_3",
+          "question": "What is spooling in operating systems?",
+          "answer": "Spooling (Simultaneous Peripheral Operation On-Line) is a technique where data for a slow I/O device like a printer is first copied to a temporary storage area (spool), allowing the device to access it at its own pace while the CPU moves on to other tasks.",
+          "explanation": "Print spooling is a common example, where documents queue up in the spool before being sent to the printer one at a time.",
+          "difficulty": "intermediate",
+          "subcategory": "I/O Techniques"
+        },
+        {
+          "id": "io_4",
+          "question": "What is Direct Memory Access (DMA)?",
+          "answer": "DMA is a feature that allows certain hardware subsystems to access main memory independently of the CPU. It offloads data transfer operations from the CPU, reducing CPU utilization during I/O operations.",
+          "explanation": "DMA is particularly useful for high-speed devices like disk drives, network cards, and graphics cards, where large amounts of data need to be transferred.",
+          "difficulty": "advanced",
+          "subcategory": "I/O Techniques"
+        }
+      ]
+    }
+  ]
+} 

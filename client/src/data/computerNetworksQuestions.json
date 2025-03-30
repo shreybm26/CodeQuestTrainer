@@ -1,0 +1,272 @@
+{
+  "subject": "Computer Networks",
+  "description": "Questions on networking protocols, models, architectures, and security",
+  "topics": [
+    {
+      "name": "Network Models",
+      "description": "OSI and TCP/IP models, layers and their functions",
+      "questions": [
+        {
+          "id": "netmodel_1",
+          "question": "What are the seven layers of the OSI model?",
+          "answer": "Physical, Data Link, Network, Transport, Session, Presentation, and Application layers.",
+          "explanation": "The OSI (Open Systems Interconnection) model is a conceptual framework used to understand network interactions in seven layers.",
+          "difficulty": "beginner",
+          "subcategory": "OSI Model"
+        },
+        {
+          "id": "netmodel_2",
+          "question": "What is the main difference between the OSI model and the TCP/IP model?",
+          "answer": "The OSI model has seven layers, while the TCP/IP model has four layers. The TCP/IP model is more practical and widely implemented, while the OSI model is more theoretical.",
+          "explanation": "The TCP/IP model combines several OSI layers and is the foundation of the modern Internet.",
+          "difficulty": "intermediate",
+          "subcategory": "Network Models"
+        },
+        {
+          "id": "netmodel_3",
+          "question": "Which of the following protocols operates at the Transport layer?",
+          "options": ["HTTP", "TCP", "IP", "Ethernet"],
+          "answer": "TCP",
+          "explanation": "TCP (Transmission Control Protocol) operates at the Transport layer (Layer 4) of the OSI model and provides reliable, connection-oriented data delivery.",
+          "difficulty": "beginner",
+          "subcategory": "Transport Layer"
+        },
+        {
+          "id": "netmodel_4",
+          "question": "What is the function of the Network layer in the OSI model?",
+          "answer": "The Network layer is responsible for packet forwarding, routing, and addressing. It handles the transfer of data across different networks.",
+          "explanation": "This layer determines the best path for data to travel from source to destination, often across multiple networks.",
+          "difficulty": "intermediate",
+          "subcategory": "Network Layer"
+        },
+        {
+          "id": "netmodel_5",
+          "question": "Which protocol operates at the highest layer of the TCP/IP model?",
+          "options": ["IP", "TCP", "HTTP", "ARP"],
+          "answer": "HTTP",
+          "explanation": "HTTP (Hypertext Transfer Protocol) operates at the Application layer, which is the highest layer in the TCP/IP model.",
+          "difficulty": "intermediate",
+          "subcategory": "Application Layer"
+        },
+        {
+          "id": "netmodel_6",
+          "question": "What is the purpose of encapsulation in networking?",
+          "answer": "Encapsulation is the process of adding headers and sometimes trailers to data as it moves down the protocol stack, preparing it for transmission across the network.",
+          "explanation": "Each layer adds its own information, allowing the corresponding layer on the receiving end to process it properly.",
+          "difficulty": "advanced",
+          "subcategory": "Network Concepts"
+        }
+      ]
+    },
+    {
+      "name": "Internet Protocols",
+      "description": "TCP/IP, UDP, HTTP, and other core internet protocols",
+      "questions": [
+        {
+          "id": "proto_1",
+          "question": "What is the difference between TCP and UDP?",
+          "answer": "TCP is connection-oriented, reliable, and provides error checking and flow control. UDP is connectionless, unreliable, but faster with less overhead.",
+          "explanation": "TCP is used when reliability is critical (e.g., web browsing, email), while UDP is used when speed is more important (e.g., streaming, gaming).",
+          "difficulty": "intermediate",
+          "subcategory": "Transport Protocols"
+        },
+        {
+          "id": "proto_2",
+          "question": "What is a TCP three-way handshake?",
+          "answer": "A three-way handshake is the method TCP uses to establish a connection. It involves SYN, SYN-ACK, and ACK messages exchanged between client and server.",
+          "explanation": "This process synchronizes sequence numbers and ensures both sides are ready for data transmission.",
+          "difficulty": "intermediate",
+          "subcategory": "TCP"
+        },
+        {
+          "id": "proto_3",
+          "question": "Which of the following is NOT a version of the IP protocol?",
+          "options": ["IPv4", "IPv5", "IPv6", "IPv7"],
+          "answer": "IPv7",
+          "explanation": "IPv4 and IPv6 are widely used versions of the Internet Protocol. IPv5 was an experimental protocol that never became a standard. IPv7 does not exist.",
+          "difficulty": "beginner",
+          "subcategory": "IP"
+        },
+        {
+          "id": "proto_4",
+          "question": "What is the purpose of ICMP?",
+          "answer": "Internet Control Message Protocol (ICMP) is used for error reporting and operational information about IP packet processing. It's used by tools like ping and traceroute.",
+          "explanation": "ICMP messages typically report errors in packet processing or provide network diagnostic information.",
+          "difficulty": "intermediate",
+          "subcategory": "Network Protocols"
+        },
+        {
+          "id": "proto_5",
+          "question": "What is the difference between HTTP and HTTPS?",
+          "answer": "HTTPS (HTTP Secure) is HTTP with encryption. It uses SSL/TLS protocols to encrypt the communication between the browser and server.",
+          "explanation": "HTTPS provides secure communication for sensitive information like passwords, credit card details, and personal information.",
+          "difficulty": "beginner",
+          "subcategory": "Web Protocols"
+        },
+        {
+          "id": "proto_6",
+          "question": "How does TCP handle reliable data delivery?",
+          "answer": "TCP ensures reliable delivery through sequence numbers, acknowledgments, checksums, and retransmissions of lost packets.",
+          "explanation": "If a packet is lost or corrupted, TCP will detect this and retransmit the missing data, ensuring all data is delivered correctly.",
+          "difficulty": "advanced",
+          "subcategory": "TCP"
+        },
+        {
+          "id": "proto_7",
+          "question": "What is the purpose of the ARP protocol?",
+          "answer": "Address Resolution Protocol (ARP) maps IP addresses to MAC addresses in a local network.",
+          "explanation": "When a device wants to communicate with another device on the same network, it needs to know the MAC address corresponding to the IP address.",
+          "difficulty": "intermediate",
+          "subcategory": "Network Protocols"
+        }
+      ]
+    },
+    {
+      "name": "Routing and Switching",
+      "description": "Network routing algorithms, protocols, and switching methods",
+      "questions": [
+        {
+          "id": "route_1",
+          "question": "What is the difference between a router and a switch?",
+          "answer": "A switch operates at the Data Link layer (Layer 2) and forwards frames within a single network using MAC addresses. A router operates at the Network layer (Layer 3) and can route packets between different networks using IP addresses.",
+          "explanation": "Switches create a local network, while routers connect different networks together.",
+          "difficulty": "beginner",
+          "subcategory": "Network Devices"
+        },
+        {
+          "id": "route_2",
+          "question": "What is the purpose of a routing table?",
+          "answer": "A routing table contains information about network destinations and how to reach them, including the next hop, interface, and metrics.",
+          "explanation": "Routers use routing tables to determine the best path for forwarding packets toward their destinations.",
+          "difficulty": "intermediate",
+          "subcategory": "Routing"
+        },
+        {
+          "id": "route_3",
+          "question": "What is the difference between RIP and OSPF?",
+          "answer": "RIP (Routing Information Protocol) is a distance-vector protocol that uses hop count as its metric. OSPF (Open Shortest Path First) is a link-state protocol that uses bandwidth-based cost metrics and can handle larger networks more efficiently.",
+          "explanation": "OSPF is generally more scalable and converges faster than RIP in large networks.",
+          "difficulty": "advanced",
+          "subcategory": "Routing Protocols"
+        },
+        {
+          "id": "route_4",
+          "question": "What is a default gateway?",
+          "answer": "A default gateway is the device (usually a router) that forwards packets from the local network to destinations in other networks when no other route is specified.",
+          "explanation": "When a device wants to communicate with a device on another network, it sends the packet to the default gateway if it doesn't have a specific route.",
+          "difficulty": "beginner",
+          "subcategory": "Routing"
+        },
+        {
+          "id": "route_5",
+          "question": "What is the spanning tree protocol (STP) used for?",
+          "answer": "STP prevents loops in Ethernet networks with redundant paths by selectively blocking ports to ensure a loop-free topology.",
+          "explanation": "Without STP, broadcast storms, multiple frame deliveries, and MAC table instability could occur in networks with redundant links.",
+          "difficulty": "advanced",
+          "subcategory": "Switching"
+        }
+      ]
+    },
+    {
+      "name": "Network Security",
+      "description": "Security protocols, firewalls, VPNs, and threats",
+      "questions": [
+        {
+          "id": "sec_1",
+          "question": "What is a firewall?",
+          "answer": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's security policies.",
+          "explanation": "Firewalls act as a barrier between a trusted network and untrusted networks, such as the Internet.",
+          "difficulty": "beginner",
+          "subcategory": "Security Devices"
+        },
+        {
+          "id": "sec_2",
+          "question": "What is a VPN and what is its purpose?",
+          "answer": "A Virtual Private Network (VPN) creates a secure, encrypted connection over a less secure network, like the internet. It allows users to send and receive data as if their devices were directly connected to a private network.",
+          "explanation": "VPNs are commonly used to access region-restricted websites, shield browsing activity from public Wi-Fi, and protect sensitive data.",
+          "difficulty": "intermediate",
+          "subcategory": "Security Protocols"
+        },
+        {
+          "id": "sec_3",
+          "question": "What is a DDoS attack?",
+          "answer": "A Distributed Denial of Service (DDoS) attack attempts to make a service unavailable by flooding it with traffic from multiple sources.",
+          "explanation": "DDoS attacks overwhelm servers, networks, or services with excessive requests, preventing legitimate users from accessing them.",
+          "difficulty": "intermediate",
+          "subcategory": "Network Threats"
+        },
+        {
+          "id": "sec_4",
+          "question": "What is the difference between symmetric and asymmetric encryption?",
+          "answer": "Symmetric encryption uses the same key for encryption and decryption. Asymmetric encryption uses a public key for encryption and a private key for decryption.",
+          "explanation": "Symmetric encryption is faster but requires secure key exchange. Asymmetric encryption is slower but solves the key distribution problem.",
+          "difficulty": "advanced",
+          "subcategory": "Cryptography"
+        },
+        {
+          "id": "sec_5",
+          "question": "What is a man-in-the-middle attack?",
+          "answer": "A man-in-the-middle (MITM) attack occurs when an attacker secretly relays and possibly alters communication between two parties who believe they are directly communicating with each other.",
+          "explanation": "The attacker can intercept, read, and modify data without either party knowing, often by impersonating both sides of the connection.",
+          "difficulty": "advanced",
+          "subcategory": "Network Threats"
+        },
+        {
+          "id": "sec_6",
+          "question": "What is the purpose of TLS/SSL in network security?",
+          "answer": "Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), are cryptographic protocols that provide secure communication over a network by encrypting data and authenticating the connection.",
+          "explanation": "TLS/SSL is commonly used to secure web browsing (HTTPS), email, file transfers, and other applications.",
+          "difficulty": "intermediate",
+          "subcategory": "Security Protocols"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Networks",
+      "description": "Wi-Fi standards, protocols, and security",
+      "questions": [
+        {
+          "id": "wifi_1",
+          "question": "What does IEEE 802.11 refer to?",
+          "answer": "IEEE 802.11 is a set of standards for wireless local area network (WLAN) communications, commonly known as Wi-Fi.",
+          "explanation": "Different versions (like 802.11a, 802.11b, 802.11g, 802.11n, 802.11ac, and 802.11ax) define various speeds and frequencies.",
+          "difficulty": "beginner",
+          "subcategory": "Wi-Fi Standards"
+        },
+        {
+          "id": "wifi_2",
+          "question": "What is the difference between WEP, WPA, and WPA2?",
+          "answer": "WEP (Wired Equivalent Privacy) is an older, insecure encryption protocol. WPA (Wi-Fi Protected Access) improved security over WEP. WPA2 further enhanced security with AES encryption. WPA3 is the newest standard with even stronger protection.",
+          "explanation": "WEP can be easily cracked, WPA was a temporary solution, and WPA2/WPA3 are currently recommended for secure Wi-Fi networks.",
+          "difficulty": "intermediate",
+          "subcategory": "Wi-Fi Security"
+        },
+        {
+          "id": "wifi_3",
+          "question": "What is a service set identifier (SSID)?",
+          "answer": "An SSID is the name that identifies a wireless network. Devices use this name to connect to the specific network.",
+          "explanation": "SSIDs can be hidden for security purposes, though this provides minimal actual security benefit.",
+          "difficulty": "beginner",
+          "subcategory": "Wi-Fi Basics"
+        },
+        {
+          "id": "wifi_4",
+          "question": "What wireless technology is commonly used for short-range communications between devices like headphones and smartphones?",
+          "options": ["Wi-Fi", "Bluetooth", "NFC", "Cellular"],
+          "answer": "Bluetooth",
+          "explanation": "Bluetooth is designed for short-range wireless communications (typically up to 10 meters) with relatively low power consumption.",
+          "difficulty": "beginner",
+          "subcategory": "Wireless Technologies"
+        },
+        {
+          "id": "wifi_5",
+          "question": "What is the main difference between 2.4 GHz and 5 GHz Wi-Fi?",
+          "answer": "2.4 GHz has better range but lower speed and is more prone to interference. 5 GHz offers faster speeds and less interference but has a shorter range and poorer penetration through walls.",
+          "explanation": "Many modern routers are dual-band, offering both frequencies to balance range and speed requirements.",
+          "difficulty": "intermediate",
+          "subcategory": "Wi-Fi Standards"
+        }
+      ]
+    }
+  ]
+} 

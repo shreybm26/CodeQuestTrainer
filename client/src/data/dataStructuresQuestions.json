@@ -1,0 +1,229 @@
+{
+  "subject": "Data Structures",
+  "description": "Questions on various data structures, their operations, and applications",
+  "topics": [
+    {
+      "name": "Trees",
+      "description": "Binary trees, BST, AVL trees, and tree traversal algorithms",
+      "questions": [
+        {
+          "id": "trees_1",
+          "question": "What is a binary tree?",
+          "answer": "A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child.",
+          "explanation": "Binary trees are fundamental data structures that provide an efficient way to store and search for data.",
+          "difficulty": "beginner",
+          "subcategory": "Binary Trees"
+        },
+        {
+          "id": "trees_2",
+          "question": "What is a binary search tree (BST)?",
+          "answer": "A binary search tree is a binary tree where for each node, all elements in the left subtree are less than the node, and all elements in the right subtree are greater than the node.",
+          "explanation": "BSTs provide efficient searching, insertion, and deletion operations when balanced.",
+          "difficulty": "intermediate",
+          "subcategory": "Binary Search Trees"
+        },
+        {
+          "id": "trees_3",
+          "question": "What is a red-black tree?",
+          "answer": "A red-black tree is a self-balancing binary search tree where each node has an extra attribute - color (either red or black), which ensures the tree remains approximately balanced during insertions and deletions.",
+          "explanation": "Red-black trees maintain O(log n) height by enforcing rules about node coloring and restructuring the tree after modifications.",
+          "difficulty": "advanced",
+          "subcategory": "Balanced Trees"
+        },
+        {
+          "id": "trees_4",
+          "question": "What is the time complexity of searching for an element in a balanced binary search tree?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "answer": "O(log n)",
+          "explanation": "In a balanced BST, each comparison eliminates roughly half of the remaining tree, resulting in logarithmic time complexity.",
+          "difficulty": "intermediate",
+          "subcategory": "Binary Search Trees"
+        },
+        {
+          "id": "trees_5",
+          "question": "What is an AVL tree?",
+          "answer": "An AVL tree is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one. If the difference becomes more than one, the tree is rebalanced.",
+          "explanation": "AVL trees maintain O(log n) height through rotations after insertions and deletions, ensuring efficient operations.",
+          "difficulty": "advanced",
+          "subcategory": "Balanced Trees"
+        },
+        {
+          "id": "trees_6",
+          "question": "What is the Lowest Common Ancestor (LCA) of two nodes in a tree?",
+          "answer": "The Lowest Common Ancestor of two nodes is the deepest node that has both nodes as descendants.",
+          "explanation": "LCA has applications in network routing, computational biology, and is often used in queries on tree data structures.",
+          "difficulty": "advanced",
+          "subcategory": "Tree Algorithms"
+        },
+        {
+          "id": "trees_7",
+          "question": "Which of the following is NOT a valid tree traversal method?",
+          "options": ["Inorder", "Preorder", "Postorder", "Linearorder"],
+          "answer": "Linearorder",
+          "explanation": "The valid tree traversal methods are Inorder (left, root, right), Preorder (root, left, right), and Postorder (left, right, root).",
+          "difficulty": "intermediate",
+          "subcategory": "Tree Traversal"
+        },
+        {
+          "id": "trees_8",
+          "question": "What is a B-tree and how does it differ from a binary tree?",
+          "answer": "A B-tree is a self-balancing tree structure that maintains sorted data and allows for efficient insertion, deletion, and search operations. Unlike binary trees, B-trees can have more than two children per node and are optimized for disk access.",
+          "explanation": "B-trees are commonly used in databases and file systems where data is read and written in blocks.",
+          "difficulty": "expert",
+          "subcategory": "Advanced Trees"
+        }
+      ]
+    },
+    {
+      "name": "Graphs",
+      "description": "Graph representations, traversal algorithms, and applications",
+      "questions": [
+        {
+          "id": "graphs_1",
+          "question": "What is the difference between Depth-First Search (DFS) and Breadth-First Search (BFS)?",
+          "answer": "DFS explores as far as possible along each branch before backtracking, while BFS explores all neighbors at the present depth before moving to nodes at the next depth level.",
+          "explanation": "Both are graph traversal algorithms with different approaches to exploring nodes.",
+          "difficulty": "intermediate",
+          "subcategory": "Graph Traversal"
+        },
+        {
+          "id": "graphs_2",
+          "question": "What data structure is commonly used to implement BFS?",
+          "options": ["Queue", "Stack", "Array", "Linked List"],
+          "answer": "Queue",
+          "explanation": "BFS uses a queue (FIFO) to keep track of nodes to visit next, ensuring level-by-level traversal.",
+          "difficulty": "beginner",
+          "subcategory": "Graph Traversal"
+        },
+        {
+          "id": "graphs_3",
+          "question": "What is a graph cycle?",
+          "answer": "A graph cycle is a path in which the starting and ending vertices are the same, with no other vertices repeating.",
+          "explanation": "Detecting cycles is important in many graph algorithms to avoid infinite loops during traversal.",
+          "difficulty": "intermediate",
+          "subcategory": "Graph Concepts"
+        },
+        {
+          "id": "graphs_4",
+          "question": "What is the time complexity of DFS on an adjacency list representation?",
+          "options": ["O(V)", "O(E)", "O(V+E)", "O(V*E)"],
+          "answer": "O(V+E)",
+          "explanation": "DFS visits each vertex once (O(V)) and traverses each edge once (O(E)), resulting in O(V+E) complexity for an adjacency list.",
+          "difficulty": "advanced",
+          "subcategory": "Graph Algorithms"
+        },
+        {
+          "id": "graphs_5",
+          "question": "Which of these graph traversal algorithms is guaranteed to find the shortest path in an unweighted graph?",
+          "options": ["DFS", "BFS", "Preorder Traversal", "Postorder Traversal"],
+          "answer": "BFS",
+          "explanation": "BFS explores nodes level by level, ensuring the first time a node is discovered is via the shortest path from the source in an unweighted graph.",
+          "difficulty": "intermediate",
+          "subcategory": "Graph Traversal"
+        },
+        {
+          "id": "graphs_6",
+          "question": "What is Dijkstra's algorithm used for?",
+          "answer": "Dijkstra's algorithm is used to find the shortest paths from a source vertex to all other vertices in a weighted graph with non-negative weights.",
+          "explanation": "It uses a greedy approach, always selecting the unvisited vertex with the lowest distance value.",
+          "difficulty": "advanced",
+          "subcategory": "Graph Algorithms"
+        },
+        {
+          "id": "graphs_7",
+          "question": "In a directed graph, what is the difference between a strongly connected component and a weakly connected component?",
+          "answer": "A strongly connected component is a subset of vertices where every vertex is reachable from every other vertex. A weakly connected component is a subset of vertices that would be connected if the directed edges were replaced with undirected edges.",
+          "explanation": "Strong connectivity requires paths in both directions between any two vertices, while weak connectivity ignores edge directions.",
+          "difficulty": "expert",
+          "subcategory": "Graph Concepts"
+        },
+        {
+          "id": "graphs_8",
+          "question": "What is a minimum spanning tree (MST)?",
+          "answer": "A minimum spanning tree is a subset of edges from a connected, undirected graph that connects all the vertices together with the minimum possible total edge weight without forming any cycles.",
+          "explanation": "MSTs are used in network design, clustering algorithms, and approximate algorithms for NP-hard problems.",
+          "difficulty": "advanced",
+          "subcategory": "Graph Algorithms"
+        }
+      ]
+    },
+    {
+      "name": "Heaps",
+      "description": "Min-heaps, max-heaps, and priority queues",
+      "questions": [
+        {
+          "id": "heaps_1",
+          "question": "What is a binary heap?",
+          "answer": "A binary heap is a complete binary tree where the value of each node is either greater than or equal to (max-heap) or less than or equal to (min-heap) the values of its children.",
+          "explanation": "Binary heaps are commonly used to implement priority queues.",
+          "difficulty": "intermediate",
+          "subcategory": "Heap Basics"
+        },
+        {
+          "id": "heaps_2",
+          "question": "What is the time complexity of extracting the minimum element from a min heap?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "answer": "O(log n)",
+          "explanation": "Extracting the minimum requires removing the root and then restoring the heap property by moving down the tree, which takes logarithmic time.",
+          "difficulty": "intermediate",
+          "subcategory": "Heap Operations"
+        },
+        {
+          "id": "heaps_3",
+          "question": "What is the advantage of using a Fibonacci heap over a binary heap?",
+          "answer": "Fibonacci heaps have better amortized running times for many operations. Specifically, insert, find minimum, and decrease key operations take O(1) amortized time compared to O(log n) for binary heaps.",
+          "explanation": "Fibonacci heaps are more efficient for applications with many decrease key operations, like Dijkstra's algorithm with priority queues.",
+          "difficulty": "expert",
+          "subcategory": "Advanced Heaps"
+        }
+      ]
+    },
+    {
+      "name": "Hash Tables",
+      "description": "Hash functions, collision resolution, and applications",
+      "questions": [
+        {
+          "id": "hash_1",
+          "question": "What is a hash function?",
+          "answer": "A hash function is a function that maps data of arbitrary size to fixed-size values, typically for use in hash tables.",
+          "explanation": "Good hash functions distribute keys uniformly across the hash table to minimize collisions.",
+          "difficulty": "beginner",
+          "subcategory": "Hash Basics"
+        },
+        {
+          "id": "hash_2",
+          "question": "What is a collision in hash tables?",
+          "answer": "A collision occurs when two different keys produce the same hash value (hash code).",
+          "explanation": "Collisions are inevitable in hash tables because the number of possible keys exceeds the number of possible hash values.",
+          "difficulty": "beginner",
+          "subcategory": "Hash Basics"
+        },
+        {
+          "id": "hash_3",
+          "question": "Name two methods for resolving collisions in hash tables.",
+          "answer": "Chaining (storing colliding elements in a linked list or other data structure) and open addressing (finding another slot in the table using probing techniques like linear probing, quadratic probing, or double hashing).",
+          "explanation": "Different collision resolution methods have trade-offs in terms of performance, memory usage, and implementation complexity.",
+          "difficulty": "intermediate",
+          "subcategory": "Collision Resolution"
+        },
+        {
+          "id": "hash_4",
+          "question": "What is the average time complexity for insertions, deletions, and searches in a hash table?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "answer": "O(1)",
+          "explanation": "Hash tables provide constant-time average complexity for these operations, assuming a good hash function and appropriate load factor.",
+          "difficulty": "intermediate",
+          "subcategory": "Hash Performance"
+        },
+        {
+          "id": "hash_5",
+          "question": "What is the load factor of a hash table?",
+          "answer": "The load factor is the ratio of the number of stored elements to the number of slots in the hash table.",
+          "explanation": "A higher load factor means more elements in fewer slots, increasing the risk of collisions and degrading performance.",
+          "difficulty": "intermediate",
+          "subcategory": "Hash Performance"
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,207 @@
+{
+  "subject": "Database Management Systems",
+  "description": "Questions on database concepts, SQL, normalization, and database design",
+  "topics": [
+    {
+      "name": "Relational Database Concepts",
+      "description": "Fundamental concepts of relational databases and data modeling",
+      "questions": [
+        {
+          "id": "rel_1",
+          "question": "What is a primary key in a relational database?",
+          "answer": "A primary key is a column or set of columns that uniquely identifies each row in a table. It must contain unique values and cannot be null.",
+          "explanation": "Primary keys ensure entity integrity and provide a way to reference specific rows in related tables.",
+          "difficulty": "beginner",
+          "subcategory": "Database Basics"
+        },
+        {
+          "id": "rel_2",
+          "question": "What is a foreign key?",
+          "answer": "A foreign key is a column or set of columns in one table that refers to the primary key in another table. It establishes a relationship between the tables.",
+          "explanation": "Foreign keys enforce referential integrity and implement relationships between tables in a relational database.",
+          "difficulty": "beginner",
+          "subcategory": "Database Basics"
+        },
+        {
+          "id": "rel_3",
+          "question": "What are the three types of relationships in a relational database?",
+          "answer": "One-to-One (1:1), One-to-Many (1:N), and Many-to-Many (M:N).",
+          "explanation": "These relationship types define how records in one table are connected to records in another table, helping to model real-world relationships.",
+          "difficulty": "intermediate",
+          "subcategory": "Data Modeling"
+        },
+        {
+          "id": "rel_4",
+          "question": "What is the difference between DDL, DML, and DCL in SQL?",
+          "answer": "DDL (Data Definition Language) is used to define database structure (CREATE, ALTER, DROP). DML (Data Manipulation Language) is used to manipulate data (SELECT, INSERT, UPDATE, DELETE). DCL (Data Control Language) is used to manage access permissions (GRANT, REVOKE).",
+          "explanation": "These categories help organize SQL commands based on their function and purpose in database management.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Commands"
+        },
+        {
+          "id": "rel_5",
+          "question": "What is entity integrity?",
+          "answer": "Entity integrity is a database constraint that ensures every row in a table has a unique identifier (primary key) and that the primary key columns cannot contain NULL values.",
+          "explanation": "Entity integrity is one of the fundamental integrity rules in relational databases, ensuring that each entity (row) can be uniquely identified.",
+          "difficulty": "intermediate",
+          "subcategory": "Data Integrity"
+        }
+      ]
+    },
+    {
+      "name": "Normalization",
+      "description": "Database normalization principles and normal forms",
+      "questions": [
+        {
+          "id": "norm_1",
+          "question": "What is normalization in database design?",
+          "answer": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves dividing large tables into smaller, related tables and defining relationships between them.",
+          "explanation": "Normalization helps eliminate anomalies (insertion, update, deletion) and ensures that data is stored logically and efficiently.",
+          "difficulty": "intermediate",
+          "subcategory": "Normalization Basics"
+        },
+        {
+          "id": "norm_2",
+          "question": "What is First Normal Form (1NF)?",
+          "answer": "A relation is in First Normal Form if it contains atomic (indivisible) values only, and there are no repeating groups or arrays.",
+          "explanation": "1NF eliminates repeating groups by requiring that each column contain only atomic values and each record have a unique identifier.",
+          "difficulty": "intermediate",
+          "subcategory": "Normal Forms"
+        },
+        {
+          "id": "norm_3",
+          "question": "What is Second Normal Form (2NF)?",
+          "answer": "A relation is in Second Normal Form if it is in 1NF and every non-key attribute is fully functionally dependent on the entire primary key (not just part of it).",
+          "explanation": "2NF eliminates partial dependencies by ensuring that non-key attributes depend on the entire primary key, not just a subset of it.",
+          "difficulty": "advanced",
+          "subcategory": "Normal Forms"
+        },
+        {
+          "id": "norm_4",
+          "question": "What is Third Normal Form (3NF)?",
+          "answer": "A relation is in Third Normal Form if it is in 2NF and no non-key attribute is transitively dependent on the primary key (all non-key attributes depend directly on the primary key).",
+          "explanation": "3NF eliminates transitive dependencies by ensuring that non-key attributes depend only on the primary key, not on other non-key attributes.",
+          "difficulty": "advanced",
+          "subcategory": "Normal Forms"
+        },
+        {
+          "id": "norm_5",
+          "question": "What is Boyce-Codd Normal Form (BCNF)?",
+          "answer": "A relation is in BCNF if, for every non-trivial functional dependency X → Y, X is a superkey (X can uniquely determine all attributes in the relation).",
+          "explanation": "BCNF is a stronger form of 3NF that addresses certain anomalies not eliminated by 3NF when multiple candidate keys exist.",
+          "difficulty": "expert",
+          "subcategory": "Advanced Normalization"
+        }
+      ]
+    },
+    {
+      "name": "SQL",
+      "description": "SQL query language, joins, subqueries, and advanced operations",
+      "questions": [
+        {
+          "id": "sql_1",
+          "question": "What is the difference between INNER JOIN and LEFT JOIN in SQL?",
+          "answer": "INNER JOIN returns only the rows where there is a match in both tables. LEFT JOIN returns all rows from the left table and the matched rows from the right table (with NULL values for non-matching rows).",
+          "explanation": "JOIN operations are essential for combining data from multiple tables in relational databases.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Joins"
+        },
+        {
+          "id": "sql_2",
+          "question": "What is a subquery in SQL?",
+          "answer": "A subquery is a query nested inside another query (SELECT, INSERT, UPDATE, or DELETE). It can return data that will be used in the main query as a condition to further restrict the data to be retrieved.",
+          "explanation": "Subqueries can be used in various places such as SELECT, FROM, WHERE, and HAVING clauses depending on the requirement.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Queries"
+        },
+        {
+          "id": "sql_3",
+          "question": "What is the difference between GROUP BY and ORDER BY in SQL?",
+          "answer": "GROUP BY is used to arrange identical data into groups and typically used with aggregate functions (COUNT, MAX, MIN, SUM, AVG). ORDER BY is used to sort the result set by one or more columns in ascending or descending order.",
+          "explanation": "GROUP BY affects how data is combined and summarized, while ORDER BY affects only the order of the results without changing the content.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Clauses"
+        },
+        {
+          "id": "sql_4",
+          "question": "What is the difference between TRUNCATE and DELETE commands?",
+          "options": ["TRUNCATE is DDL, DELETE is DML", "TRUNCATE can't be rolled back, DELETE can", "TRUNCATE is faster than DELETE", "All of the above"],
+          "answer": "All of the above",
+          "explanation": "TRUNCATE is DDL (doesn't log individual row deletions), can't be rolled back in many databases, doesn't trigger DELETE triggers, and is generally faster because it deallocates pages instead of rows.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Commands"
+        },
+        {
+          "id": "sql_5",
+          "question": "What are SQL aggregate functions? Give examples.",
+          "answer": "Aggregate functions perform calculations on a set of values and return a single value. Examples include COUNT(), SUM(), AVG(), MIN(), and MAX().",
+          "explanation": "Aggregate functions are often used with GROUP BY clauses to perform calculations on grouped data.",
+          "difficulty": "beginner",
+          "subcategory": "SQL Functions"
+        },
+        {
+          "id": "sql_6",
+          "question": "What is a SQL view?",
+          "answer": "A view is a virtual table based on the result set of a SQL statement. It contains rows and columns, just like a real table, but doesn't store data itself; it's a saved query that acts like a table.",
+          "explanation": "Views can simplify complex queries, provide an additional security layer, and present data in a more user-friendly format.",
+          "difficulty": "intermediate",
+          "subcategory": "SQL Objects"
+        },
+        {
+          "id": "sql_7",
+          "question": "What is a SQL transaction?",
+          "answer": "A transaction is a sequence of operations performed as a single logical unit of work. It follows ACID properties: Atomicity, Consistency, Isolation, and Durability.",
+          "explanation": "Transactions ensure that database operations are processed reliably, maintaining data integrity even in case of system failures.",
+          "difficulty": "advanced",
+          "subcategory": "Transactions"
+        }
+      ]
+    },
+    {
+      "name": "Indexing and Optimization",
+      "description": "Database indexing concepts and query optimization techniques",
+      "questions": [
+        {
+          "id": "idx_1",
+          "question": "What is a database index?",
+          "answer": "A database index is a data structure that improves the speed of data retrieval operations by providing rapid random lookups and efficient access to ordered records.",
+          "explanation": "Indexes can be created using one or more columns, providing a faster path to the data than scanning the entire table.",
+          "difficulty": "intermediate",
+          "subcategory": "Indexing Basics"
+        },
+        {
+          "id": "idx_2",
+          "question": "What are the advantages and disadvantages of indexes?",
+          "answer": "Advantages: Faster data retrieval, improved query performance, enforcement of uniqueness. Disadvantages: Additional storage space, slower data modification operations (INSERT, UPDATE, DELETE) due to index maintenance, and increased database size.",
+          "explanation": "Indexes represent a trade-off between query speed and write speed, along with storage considerations.",
+          "difficulty": "intermediate",
+          "subcategory": "Indexing Concepts"
+        },
+        {
+          "id": "idx_3",
+          "question": "What is the difference between a clustered and non-clustered index?",
+          "answer": "A clustered index determines the physical order of data in a table (only one per table). A non-clustered index creates a separate structure that points to the data rows without affecting physical order (multiple per table).",
+          "explanation": "Clustered indexes are typically faster for range queries but slower for inserts. Non-clustered indexes are good for selective queries on specific columns.",
+          "difficulty": "advanced",
+          "subcategory": "Index Types"
+        },
+        {
+          "id": "idx_4",
+          "question": "What is query optimization in databases?",
+          "answer": "Query optimization is the process of selecting the most efficient execution plan for a query. The database optimizer analyzes possible execution strategies and chooses the one with the lowest estimated cost.",
+          "explanation": "Query optimization can involve rewriting queries, adding appropriate indexes, denormalizing data, or changing the database schema.",
+          "difficulty": "advanced",
+          "subcategory": "Query Optimization"
+        },
+        {
+          "id": "idx_5",
+          "question": "What is a composite index?",
+          "answer": "A composite index (also called a compound index) is an index on multiple columns of a table. The order of columns in the index is important for query optimization.",
+          "explanation": "Composite indexes are useful for queries that filter on multiple columns or need to sort by multiple columns.",
+          "difficulty": "intermediate",
+          "subcategory": "Index Types"
+        }
+      ]
+    }
+  ]
+} 
