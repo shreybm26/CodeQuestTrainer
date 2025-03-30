@@ -55,7 +55,26 @@ export const getQueryFn: <T>(options: {
     }
 
     await throwIfResNotOk(res);
-    return await res.json();
+    
+    // Parse the response
+    const data = await res.json();
+    
+    // Check if we're expecting an array but got something else
+    // This prevents the "o.map is not a function" error
+    if (Array.isArray(data)) {
+      return data;
+    } else if (data === null) {
+      // If the data is null, return an empty array to prevent null.map errors
+      console.warn(`API returned null for query ${queryKey[0]}, defaulting to empty array`);
+      return [] as any;
+    } else if (typeof data === 'object') {
+      // Return the object as is for object responses
+      return data;
+    } else {
+      // For all other cases, log and return the data
+      console.warn(`Unexpected data type for query ${queryKey[0]}`);
+      return data;
+    }
   };
 
 export const queryClient = new QueryClient({
