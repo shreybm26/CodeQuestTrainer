@@ -73,9 +73,7 @@ export default function ChallengesList() {
     }
   ];
 
-  // Safely handle the data - ensure displayChallenges is always an array
-  const displayChallenges = Array.isArray(challenges) ? challenges : 
-                           (challenges ? [challenges as unknown as Challenge] : defaultChallenges);
+  const displayChallenges = challenges || defaultChallenges;
 
   return (
     <Card className="bg-white rounded-xl p-6 shadow-md h-full">
@@ -87,7 +85,7 @@ export default function ChallengesList() {
       </div>
       
       <div className="space-y-4">
-        {displayChallenges && displayChallenges.map((challenge) => (
+        {displayChallenges.map((challenge) => (
           <div 
             key={challenge.id}
             className={`bg-gradient-to-r ${challenge.gradientFrom} ${challenge.gradientTo} rounded-lg p-4 border ${challenge.border}`}
